@@ -1,0 +1,14 @@
+name: Periodic Health Check
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  health_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Perform Health Check
+        uses: jakejarvis/url-health-check@master
+        with:
+          url: 'http://localhost:5000/'
