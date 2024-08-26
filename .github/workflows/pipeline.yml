@@ -17,8 +17,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies
+      - name: Install server dependencies
         run: npm install
+        working-directory: ./server
+      - name: Install client dependencies
+        run: npm install
+        working-directory: ./client
 
       - name: Notify Discord on Failure
         if: failure()
