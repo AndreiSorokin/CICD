@@ -26,12 +26,12 @@ function App() {
     setName('')
   }
 
-  // This shouldn't be pushed
-  function sum (a, b) {
-    return console.log(a + b)
-  }
-  
-  sum(2, 2)
+    // This shouldn't be pushed
+    function sum (a, b) {
+      return console.log(a + b)
+    }
+    
+    sum(2, 2)
 
   return (
     <div>
