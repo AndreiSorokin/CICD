@@ -10,7 +10,6 @@ function App() {
   });
   
   const [name, setName] = useState('')
-  console.log(notes)
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -26,6 +25,13 @@ function App() {
     queryClient.invalidateQueries('notes');
     setName('')
   }
+
+  // This shouldn't be pushed
+  function sum (a, b) {
+    return console.log(a + b)
+  }
+  
+  sum(2, 2)
 
   return (
     <div>
